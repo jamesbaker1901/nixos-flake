@@ -26,7 +26,7 @@
     rustup
   ];
 
-  xdg.configFile."hypr".source = ./hyprland.conf;
+  xdg.configFile."hypr/hyprland.conf".source = ./user/hypr/hyprland.conf;
 
   #home.file = {
   #};
