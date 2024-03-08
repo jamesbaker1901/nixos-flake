@@ -27,6 +27,7 @@
   ];
 
   xdg.configFile."hypr/hyprland.conf".source = ./user/hypr/hyprland.conf;
+  xdg.configFile.waybar.source = ./user/waybar;
 
   #home.file = {
   #};
