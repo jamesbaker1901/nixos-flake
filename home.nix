@@ -23,7 +23,10 @@
     font-awesome
     lxappearance
     zoom-us
+    rustup
   ];
+
+  xdg.configFile."hypr".source = ./hyprland.conf;
 
   #home.file = {
   #};
@@ -66,12 +69,12 @@
       dynamic_padding = true;
       dynamic_title = true;
       startup_mode = "Windowed";
-      opacity = 0.8;
+      opacity = 1.0;
     };
     font = {
       normal = {
         family = "BlexMono Nerd Font Mono";
-	sytle = "SemiBold";
+	sytle = "Bold";
       };
       size = 14.0;
     };
@@ -177,7 +180,6 @@
     set -g display-panes-time 800 # slightly longer pane indicators display time
     set -g display-time 1000      # slightly longer status messages display time
 
-
     set -g status-interval 1     # redraw status line every 10 seconds
     set -q -g status-utf8 on                  # expect UTF-8 (tmux < 2.2)
     set -g status-position top   # place the bar at top of screen
@@ -213,7 +215,6 @@
     bind -r l select-pane -R  # move right
     bind > swap-pane -D       # swap current pane with the next one
     bind < swap-pane -U       # swap current pane with the previous one
-
 
     # window navigation
     unbind n

@@ -15,7 +15,7 @@
       laststatus = 2;
       autoread = true;
       autoindent = true;
-      backspace = [ "indent" "eol" "start"];
+      backspace = [ "indent" "eol" "start" ];
       incsearch = true;
       hlsearch = true;
       showcmd = true;
@@ -30,7 +30,7 @@
       tabstop = 2;
       softtabstop = 2;
       shiftwidth = 2;
-      updatetime = 300;
+      #updatetime = 300; # gitgutter sets this to 100 so it conflicts
       completeopt = "menuone";
       cursorline = true; 
       termguicolors = true;
@@ -133,6 +133,7 @@
     ];
 
     plugins.fugitive.enable = true;
+    plugins.gitgutter.enable = true;
 
     plugins.nvim-tree = {
       enable = true;
@@ -160,11 +161,16 @@
       servers = {
         tsserver.enable = true;
         lua-ls.enable = true;
+        gopls.enable = true;
+        bashls.enable = true;
+        jsonls.enable = true;
+        yamlls.enable = true;
         rust-analyzer = {
           enable = true;
           installRustc = true;
           installCargo = true;
         };
+        rnix-lsp.enable = true;
       };
     };
 
@@ -188,7 +194,9 @@
       enable = false;
     };
 
-    plugins.luasnip.enable = true;
+    plugins.luasnip = {
+      enable = true;
+    };
 
     plugins.bufferline.enable = true;
 
@@ -206,21 +214,7 @@
       mapping = {
         "<CR>" = "cmp.mapping.confirm({ select = true })";
         "<Tab>" = {
-          action = ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              elseif luasnip.expandable() then
-                luasnip.expand()
-              elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-              elseif check_backspace() then
-                fallback()
-              else
-                fallback()
-              end
-            end
-          '';
+          action = "cmp.mapping.select_next_item()";
           modes = [ "i" "s" ];
         };
       };
