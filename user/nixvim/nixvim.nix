@@ -1,5 +1,7 @@
 { config, pkgs, inputs, ... }: 
 {
+  imports = [ ./user/which-key.nix ];
+
   programs.nixvim = {
     enable = true;
 
@@ -7,9 +9,6 @@
 
     globals.mapleader = ",";
     
-
-    imports = [ ./user/which-key.nix ];
-
     options = {
       encoding = "utf-8";
       number = true;
