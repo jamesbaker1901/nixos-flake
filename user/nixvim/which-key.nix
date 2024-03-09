@@ -10,7 +10,15 @@
     extraConfigLua = ''
       local wk = require("which-key")
       wk.ignore_missing = true
-      wk.layout.align = "center"
+      wk.layout = {
+        align = "center",
+      }
+      wk.triggers_blacklist = {
+        -- list of mode / prefixes that should never be hooked by WhichKey
+        -- this is mostly relevant for keymaps that start with a native binding
+        i = { "j", "k", ";"},
+        v = { "j", "k" },
+      }
       -- whick-key config
       -- default menu
     	wk.register({
