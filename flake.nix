@@ -20,18 +20,19 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
-    in
-    {
-    
+    in {
+
       nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-          specialArgs = {inherit inputs;};
-          modules = [ 
-            ./configuration.nix
-            ./user/nixvim.nix
-            inputs.home-manager.nixosModules.default
-	          inputs.nixvim.nixosModules.nixvim
-          ];
-        };
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./configuration.nix
+          ./user/nixvim.nix
+          inputs.home-manager.nixosModules.default
+          inputs.nixvim.nixosModules.nixvim
+        ];
+      };
+
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
 
     };
 }

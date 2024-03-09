@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }:
-{  
+{ config, pkgs, inputs, ... }: {
   programs.nixvim = {
     enable = true;
 
@@ -21,7 +20,7 @@
       showcmd = true;
       autowrite = true;
       hidden = true;
-      fileformats = ["unix" "dos" "mac" ];
+      fileformats = [ "unix" "dos" "mac" ];
       ignorecase = true;
       smartcase = true;
       lazyredraw = true;
@@ -32,7 +31,7 @@
       shiftwidth = 2;
       #updatetime = 300; # gitgutter sets this to 100 so it conflicts
       completeopt = "menuone";
-      cursorline = true; 
+      cursorline = true;
       termguicolors = true;
     };
 
@@ -144,15 +143,13 @@
     };
 
     plugins.lualine = {
-        enable = true;
-        iconsEnabled = true;
-        componentSeparators.left = "";
-        componentSeparators.right = "";
-        sectionSeparators.left = "";
-        sectionSeparators.right = "";
-        sections = {
-          lualine_a = [ "mode" ];
-        };
+      enable = true;
+      iconsEnabled = true;
+      componentSeparators.left = "";
+      componentSeparators.right = "";
+      sectionSeparators.left = "";
+      sectionSeparators.right = "";
+      sections = { lualine_a = [ "mode" ]; };
 
     };
 
@@ -177,26 +174,14 @@
     plugins.telescope.enable = true;
     plugins.treesitter = {
       enable = true;
-      ensureInstalled = [
-        "rust"
-        "bash"
-        "json"
-        "python"
-        "yaml"
-        "nix"
-        "vim"
-      ];
+      ensureInstalled = [ "rust" "bash" "json" "python" "yaml" "nix" "vim" ];
       nixvimInjections = true;
       indent = true;
     };
 
-    plugins.which-key = {
-      enable = false;
-    };
+    plugins.which-key = { enable = false; };
 
-    plugins.luasnip = {
-      enable = true;
-    };
+    plugins.luasnip = { enable = true; };
 
     plugins.bufferline.enable = true;
 
@@ -204,11 +189,11 @@
       enable = true;
       autoEnableSources = true;
       sources = [
-        {name = "nvim_lsp";}
-        {name = "path";}
-        {name = "buffer";}
-        {name = "luasnip";}
-        {name = "cmdline";}
+        { name = "nvim_lsp"; }
+        { name = "path"; }
+        { name = "buffer"; }
+        { name = "luasnip"; }
+        { name = "cmdline"; }
       ];
 
       mapping = {
@@ -220,10 +205,7 @@
       };
     };
 
-
-    extraPlugins = with pkgs.vimPlugins; [
-      nvim-web-devicons
-    ];
+    extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons ];
 
   };
 }

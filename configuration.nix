@@ -6,10 +6,7 @@
 
 {
   imports =
-    [ 
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
+    [ ./hardware-configuration.nix inputs.home-manager.nixosModules.default ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
@@ -66,17 +63,13 @@
     description = "Jay Baker";
     extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-    ];
+    packages = with pkgs; [ firefox ];
   };
   security.sudo.wheelNeedsPassword = false;
 
   home-manager = {
-  extraSpecialArgs = {inherit inputs;};
-  users = {
-    "jay" = import ./home.nix;
-    };
+    extraSpecialArgs = { inherit inputs; };
+    users = { "jay" = import ./home.nix; };
   };
 
   # docker
@@ -85,31 +78,31 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     git
-     gcc
-     tmux
-     zsh
-     neovim 
-     wget
-     alacritty
-     bat
-     rsync
-     eza
-     bat
-     htop
-     waybar
-     dunst
-     libnotify
-     swww
-     rofi-wayland
-     networkmanagerapplet
-     feh
-     ranger
-     w3m
-     playerctl
-     wl-clipboard
-     i3status-rust
-];
+    git
+    gcc
+    tmux
+    zsh
+    neovim
+    wget
+    alacritty
+    bat
+    rsync
+    eza
+    bat
+    htop
+    waybar
+    dunst
+    libnotify
+    swww
+    rofi-wayland
+    networkmanagerapplet
+    feh
+    ranger
+    w3m
+    playerctl
+    wl-clipboard
+    i3status-rust
+  ];
 
   security.polkit.enable = true;
 
@@ -118,13 +111,9 @@
     xwayland.enable = true;
   };
 
-  xdg.portal = {
-    enable = true;
-  };
+  xdg.portal = { enable = true; };
 
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-  };
+  environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

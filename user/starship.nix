@@ -1,12 +1,12 @@
-{ config, pkgs, inputs, ... }:
-{
+{ config, pkgs, inputs, ... }: {
   programs.starship = {
     enable = true;
     settings = {
       add_newline = false;
       command_timeout = 700;
 
-      format = "$directory$git_branch$git_status$aws$line_break$env_var$kubernetes$character";
+      format =
+        "$directory$git_branch$git_status$aws$line_break$env_var$kubernetes$character";
 
       directory = {
         format = "[$path]($style)[$read_only]($read_only_style) ";
@@ -18,9 +18,7 @@
         symbol = "";
         style = "purple";
       };
-      character = {
-        vicmd_symbol = "[](bold green) ";
-      };
+      character = { vicmd_symbol = "[](bold green) "; };
       aws.region_aliases = {
         us-east-1 = "use1";
         us-west-2 = "usw2";
