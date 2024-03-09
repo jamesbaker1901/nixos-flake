@@ -26,7 +26,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
-          ./user/nixvim.nix
+          ./user/nixvim/nixvim.nix
           inputs.home-manager.nixosModules.default
           inputs.nixvim.nixosModules.nixvim
         ];

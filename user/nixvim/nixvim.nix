@@ -1,10 +1,14 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, ... }: 
+{
   programs.nixvim = {
     enable = true;
 
     colorschemes.catppuccin.enable = true;
 
     globals.mapleader = ",";
+    
+
+    imports = [ ./user/which-key.nix ];
 
     options = {
       encoding = "utf-8";
@@ -205,7 +209,11 @@
       };
     };
 
-    extraPlugins = with pkgs.vimPlugins; [ nvim-web-devicons ];
+    extraPlugins = with pkgs.vimPlugins; [
+      {
+        plugin = nvim-web-devicons;
+      }
+    ];
 
   };
 }
