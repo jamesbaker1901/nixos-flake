@@ -1,6 +1,6 @@
 { config, pkgs, inputs, ... }: 
 {
-  imports = [ ./user/which-key.nix ];
+  imports = [ ./which-key.nix ];
 
   programs.nixvim = {
     enable = true;
@@ -182,7 +182,7 @@
       indent = true;
     };
 
-    plugins.which-key = { enable = false; };
+    #plugins.which-key = { enable = false; };
 
     plugins.luasnip = { enable = true; };
 
