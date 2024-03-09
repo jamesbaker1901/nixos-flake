@@ -134,6 +134,10 @@
       }
     ];
 
+    plugins.startify = {
+    enable = true;
+    };
+
     plugins.fugitive.enable = true;
     plugins.gitgutter.enable = true;
 
@@ -182,7 +186,7 @@
       indent = true;
     };
 
-    #plugins.which-key = { enable = false; };
+    #plugins.which-key = { enable = true; };
 
     plugins.luasnip = { enable = true; };
 
