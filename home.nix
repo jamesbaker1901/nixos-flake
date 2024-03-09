@@ -26,13 +26,13 @@
     lxappearance
     zoom-us
     rustup
+    ranger
+    rofi-wayland
   ];
 
   xdg.configFile.hypr.source = ./user/hypr;
   xdg.configFile.waybar.source = ./user/waybar;
-
-  #home.file = {
-  #};
+  xdg.configFile.rofi.source = ./user/rofi;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 

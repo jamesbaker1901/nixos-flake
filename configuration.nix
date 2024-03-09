@@ -94,14 +94,11 @@
     dunst
     libnotify
     swww
-    rofi-wayland
     networkmanagerapplet
     feh
-    ranger
     w3m
     playerctl
     wl-clipboard
-    i3status-rust
   ];
 
   security.polkit.enable = true;
