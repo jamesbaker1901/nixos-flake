@@ -32,7 +32,9 @@
 
   xdg.configFile.hypr.source = ./user/hypr;
   xdg.configFile.waybar.source = ./user/waybar;
-  #xdg.configFile.rofi.source = ./user/rofi;
+
+  xdg.configFile."rofi/config.rasi".source = ./user/rofi/config.rasi;
+  home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source = ./user/rofi/themes/catppuccin-mocha.rasi;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
@@ -45,6 +47,7 @@
       la = "exa -bghla";
       lt = "exa -T";
       cat = "bat";
+      gp = "git push";
       update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
     };
   };
@@ -52,5 +55,4 @@
   programs.zoxide.enable = true;
   programs.zoxide.enableZshIntegration = true;
   programs.zoxide.enableBashIntegration = true;
-
 }
