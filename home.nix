@@ -9,7 +9,8 @@
   home.stateVersion = "23.11";
 
     imports = [
-     ./alacritty.nix
+     ./user/alacritty.nix
+     ./user/nixvim.nix
   ];
 
   home.packages = with pkgs; [
