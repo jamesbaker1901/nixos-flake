@@ -32,7 +32,7 @@
 
   xdg.configFile.hypr.source = ./user/hypr;
   xdg.configFile.waybar.source = ./user/waybar;
-  xdg.configFile.rofi.source = ./user/rofi;
+  #xdg.configFile.rofi.source = ./user/rofi;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
