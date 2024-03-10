@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }: 
-{
+{ config, pkgs, inputs, ... }: {
   programs.nixvim = {
     options = {
       encoding = "utf-8";
@@ -28,7 +27,7 @@
       completeopt = "menuone";
       cursorline = true;
       termguicolors = true;
-      };
+    };
     extraConfigLua = ''
       vim.cmd "set nocompatible"
       vim.cmd "set t_Co=256"

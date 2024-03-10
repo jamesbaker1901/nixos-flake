@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }: 
-{
+{ config, pkgs, inputs, ... }: {
   programs.nixvim = {
     plugins.nvim-tree = {
       enable = true;
