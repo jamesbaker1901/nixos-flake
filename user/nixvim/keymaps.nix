@@ -64,6 +64,15 @@
           silent = true;
         };
       }
+      {
+        key = "<F12>";
+        action = ":FloatermNew<CR>";
+        mode = "n";
+        options = {
+          noremap = true;
+          silent = true;
+        };
+      }
     ];
   };
 }
