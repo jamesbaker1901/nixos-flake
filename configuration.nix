@@ -99,6 +99,7 @@
     w3m
     playerctl
     wl-clipboard
+    usbutils
   ];
 
   security.polkit.enable = true;

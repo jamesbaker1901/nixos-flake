@@ -18,10 +18,12 @@
     globals.mapleader = ",";
 
     plugins.fugitive.enable = true;
-    plugins.gitgutter.enable = true;
+    # plugins.gitgutter.enable = true;
+    plugins.gitsigns.enable = true;
     plugins.telescope.enable = true;
     plugins.luasnip = { enable = true; };
     plugins.bufferline.enable = true;
+    plugins.comment-nvim.enable = true;
     plugins.indent-blankline = {
       enable = true;
       exclude.filetypes = [ "startify" ];
@@ -44,6 +46,15 @@
     
     extraConfigLua = ''
       require("autoclose").setup()
+      require('Comment').setup {
+        toggler = {
+          ---Line-comment toggle keymap
+          line = ',/',
+          ---Block-comment toggle keymap
+          block = ',/b',
+        },
+      }
+
     '';
   };
 }

@@ -8,7 +8,7 @@
   home.homeDirectory = "/home/jay";
   home.stateVersion = "23.11";
 
-  imports = [ ./user/alacritty.nix ./user/starship.nix ./user/tmux.nix ];
+  imports = [ ./user/alacritty.nix ./user/starship.nix ./user/tmux.nix ./user/direnv.nix ./user/zsh.nix ];
 
   home.packages = with pkgs; [
     xclip
@@ -28,6 +28,9 @@
     rustup
     ranger
     rofi-wayland
+    calibre
+    deluge-gtk
+    gmtp
   ];
 
   xdg.configFile.hypr.source = ./user/hypr;
@@ -38,21 +41,4 @@
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
-  programs.zsh = {
-    enable = true;
-    shellAliases = {
-      vim = "nvim";
-      ls = "exa";
-      ll = "exa -bghl";
-      la = "exa -bghla";
-      lt = "exa -T";
-      cat = "bat";
-      gp = "git push";
-      update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
-    };
-  };
-
-  programs.zoxide.enable = true;
-  programs.zoxide.enableZshIntegration = true;
-  programs.zoxide.enableBashIntegration = true;
 }

@@ -23,7 +23,7 @@
       tabstop = 2;
       softtabstop = 2;
       shiftwidth = 2;
-      #updatetime = 300; # gitgutter sets this to 100 so it conflicts
+      updatetime = 300; 
       completeopt = "menuone";
       cursorline = true;
       termguicolors = true;
