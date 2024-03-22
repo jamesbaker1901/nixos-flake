@@ -95,6 +95,7 @@
     libnotify
     swww
     networkmanagerapplet
+    pavucontrol
     feh
     w3m
     playerctl

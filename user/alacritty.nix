@@ -23,7 +23,7 @@
           family = "BlexMono Nerd Font Mono";
           sytle = "Bold";
         };
-        size = 14.0;
+        size = 16.0;
       };
       draw_bold_text_with_bright_colors = true;
       import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.yml"];
