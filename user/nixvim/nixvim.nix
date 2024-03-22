@@ -31,19 +31,19 @@
     plugins.nvim-lightbulb.enable = true;
     plugins.floaterm.enable = true;
     extraPlugins = with pkgs.vimPlugins; [
-      { plugin = nvim-web-devicons; } 
+      { plugin = nvim-web-devicons; }
       { plugin = autoclose-nvim; }
       (pkgs.vimUtils.buildVimPlugin {
-      name = "quick-scope";
-      src = pkgs.fetchFromGitHub {
+        name = "quick-scope";
+        src = pkgs.fetchFromGitHub {
           owner = "unblevable";
           repo = "quick-scope";
           rev = "256d81e391a22eeb53791ff62ce65f870418fa71";
           hash = "sha256-TcA4jZIdnQd06V+JrXGiCMr0Yhm9gB6OMiTSdzMt/Qw";
         };
-    })
-      ];
-    
+      })
+    ];
+
     extraConfigLua = ''
       require("autoclose").setup()
       require('Comment').setup {

@@ -26,47 +26,8 @@
         size = 14.0;
       };
       draw_bold_text_with_bright_colors = true;
-      colors = {
-        primary = {
-          background = "0x1e2127";
-          foreground = "0xabb2bf";
-        };
-        normal = {
-          black = "0x1e2127";
-          red = "0xe06c75";
-          green = "0x98c379";
-          yellow = "0xd19a66";
-          blue = "0x61afef";
-          magenta = "0xc678dd";
-          cyan = "0x56b6c2";
-          white = "0xabb2bf";
-        };
-        bright = {
-          black = "0x5c6370";
-          red = "0xe06c75";
-          green = "0x98c379";
-          yellow = "0xd19a66";
-          blue = "0x61afef";
-          magenta = "0xc678dd";
-          cyan = "0x56b6c2";
-          white = "0xffffff";
-        };
-        cursor = {
-          background = "0xf0f0f0";
-          foreground = "0x26282a";
-        };
-        dim = {
-          black = "0x31363b";
-          red = "0x783228";
-          green = "0x17a262";
-          yellow = "0xb65619";
-          blue = "0x1b668f";
-          magenta = "0x614a73";
-          cyan = "0x186c60";
-          white = "0x63686d";
-        };
-      };
-
+      import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.yml"];
+      
       cursor = {
         style = "Block";
         unfocused_hollow = true;

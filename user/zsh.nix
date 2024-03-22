@@ -1,5 +1,4 @@
-{ config, pkgs, inputs, ... }:
-{
+{ config, pkgs, inputs, ... }: {
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -18,13 +17,19 @@
       size = 10000;
       extended = true;
       ignoreSpace = true;
+      share = true;
     };
     enableCompletion = true;
+  };
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    enableBashIntegration = true;
   };
 
   programs.zoxide.enable = true;
   programs.zoxide.enableZshIntegration = true;
   programs.zoxide.enableBashIntegration = true;
-
 
 }

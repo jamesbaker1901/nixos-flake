@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }: {
   programs.nixvim = {
     extraPlugins = with pkgs.vimPlugins; [{ plugin = which-key-nvim; }];
-    
+
     extraConfigLua = ''
             -- whick-key config
             local wk = require("which-key")

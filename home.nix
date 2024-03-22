@@ -8,7 +8,13 @@
   home.homeDirectory = "/home/jay";
   home.stateVersion = "23.11";
 
-  imports = [ ./user/alacritty.nix ./user/starship.nix ./user/tmux.nix ./user/direnv.nix ./user/zsh.nix ];
+  imports = [
+    ./user/alacritty.nix
+    ./user/starship.nix
+    ./user/tmux.nix
+    ./user/direnv.nix
+    ./user/zsh.nix
+  ];
 
   home.packages = with pkgs; [
     xclip
@@ -37,7 +43,8 @@
   xdg.configFile.waybar.source = ./user/waybar;
 
   xdg.configFile."rofi/config.rasi".source = ./user/rofi/config.rasi;
-  home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source = ./user/rofi/themes/catppuccin-mocha.rasi;
+  home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source =
+    ./user/rofi/themes/catppuccin-mocha.rasi;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
