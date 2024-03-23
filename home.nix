@@ -11,7 +11,6 @@
   imports = [
     ./user/alacritty.nix
     ./user/starship.nix
-    ./user/tmux.nix
     ./user/direnv.nix
     ./user/zsh.nix
   ];
@@ -36,6 +35,7 @@
     rofi-wayland
     calibre
     deluge-gtk
+    catppuccin-gtk
     gmtp
   ];
 

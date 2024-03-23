@@ -13,16 +13,21 @@
   programs.nixvim = {
     enable = true;
 
-    colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin = {
+      enable = true;
+      flavour = "mocha";
+    };
 
     globals.mapleader = ",";
 
     plugins.fugitive.enable = true;
-    # plugins.gitgutter.enable = true;
     plugins.gitsigns.enable = true;
     plugins.telescope.enable = true;
     plugins.luasnip = { enable = true; };
-    plugins.bufferline.enable = true;
+    plugins.bufferline = { 
+      enable = true;
+      alwaysShowBufferline = false;
+    };
     plugins.comment-nvim.enable = true;
     plugins.indent-blankline = {
       enable = true;
@@ -33,6 +38,8 @@
     extraPlugins = with pkgs.vimPlugins; [
       { plugin = nvim-web-devicons; }
       { plugin = autoclose-nvim; }
+      { plugin = zen-mode-nvim; }
+      { plugin = twilight-nvim; }
       (pkgs.vimUtils.buildVimPlugin {
         name = "quick-scope";
         src = pkgs.fetchFromGitHub {

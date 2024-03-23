@@ -20,6 +20,9 @@
               v = {"<C-W>v",                          "split right"},
               S = {"<cmd>Startify<cr>",               "start screen"},
               E = {"<cmd>SSave<cr>",                  "save session"},
+              t = {"<cmd>Twilight<cr>",               "twilight"},
+              z = {"<cmd>ZenMode<cr>",                "zen mode"},
+
             }, { prefix = "<leader>" })
 
             -- misc

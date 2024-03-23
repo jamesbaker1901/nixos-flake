@@ -13,7 +13,7 @@
     };
 
     history = {
-      path = "~/.zsh_history";
+      path = "${config.xdg.dataHome}/zsh/zsh_history";
       size = 10000;
       extended = true;
       ignoreSpace = true;

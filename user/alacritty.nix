@@ -6,6 +6,7 @@
     settings = {
       scrolling = { history = 10000; };
       env.TERM = "xterm-256color";
+      import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.yml"];
       window = {
         dimensions = {
           columns = 0;
@@ -26,8 +27,7 @@
         size = 16.0;
       };
       draw_bold_text_with_bright_colors = true;
-      import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.yml"];
-      
+
       cursor = {
         style = "Block";
         unfocused_hollow = true;
