@@ -24,7 +24,7 @@
     plugins.gitsigns.enable = true;
     plugins.telescope.enable = true;
     plugins.luasnip = { enable = true; };
-    plugins.bufferline = { 
+    plugins.bufferline = {
       enable = true;
       alwaysShowBufferline = false;
     };

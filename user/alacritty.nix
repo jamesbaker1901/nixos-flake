@@ -6,7 +6,7 @@
     settings = {
       scrolling = { history = 10000; };
       env.TERM = "xterm-256color";
-      import = ["~/.config/alacritty/catppuccin/catppuccin-mocha.yml"];
+      import = [ "~/.config/alacritty/catppuccin/catppuccin-mocha.yml" ];
       window = {
         dimensions = {
           columns = 0;
