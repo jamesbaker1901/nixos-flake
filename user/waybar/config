@@ -8,9 +8,9 @@
     ],
     "modules-right": [
         "tray",
-        "clock",
         "pulseaudio",
         "battery",
+        "clock"
     ],
     "wlr/taskbar": {
         "format": "{icon}",

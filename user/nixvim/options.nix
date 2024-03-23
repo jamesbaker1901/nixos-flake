@@ -49,7 +49,7 @@
       vim.cmd "set nofoldenable"
       vim.cmd "let base16colorspace=256"
       vim.api.nvim_command("autocmd InsertEnter * norm zz")
-      -- vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
+      vim.cmd "hi Normal guibg=NONE ctermbg=NONE"
       vim.cmd "let base16colorspace=256" 
       vim.cmd "set cmdheight=1"
       vim.cmd "set timeoutlen=150"
