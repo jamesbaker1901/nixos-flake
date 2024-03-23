@@ -37,6 +37,9 @@
     deluge-gtk
     catppuccin-gtk
     gmtp
+    macchina
+    pfetch
+    grimblast
   ];
 
   xdg.configFile.hypr.source = ./user/hypr;

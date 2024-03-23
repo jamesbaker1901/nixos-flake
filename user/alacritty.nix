@@ -17,7 +17,7 @@
         dynamic_padding = true;
         dynamic_title = true;
         startup_mode = "Windowed";
-        opacity = 1.0;
+        opacity = 0.0;
       };
       font = {
         normal = {
