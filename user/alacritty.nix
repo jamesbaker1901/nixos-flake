@@ -24,7 +24,7 @@
           family = "BlexMono Nerd Font Mono";
           sytle = "Bold";
         };
-        size = 16.0;
+        size = 14.0;
       };
       draw_bold_text_with_bright_colors = true;
 

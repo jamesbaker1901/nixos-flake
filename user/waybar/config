@@ -44,7 +44,7 @@
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
         "format-alt": "{:%a, %d %b %Y}",
-        "format": "{:%I:%M %p}"
+        "format": "{:%H:%M}"
     },
     "pulseaudio": {
         "format": "{icon}",
@@ -56,7 +56,7 @@
             "headphone": "",
             "default": ["󰖀","󰕾",""]
         },
-        "on-click": "pamixer -t",
+        "on-click": "pavucontrol",
         "scroll-step": 1
     },
     "battery": {

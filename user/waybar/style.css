@@ -108,7 +108,8 @@ window#waybar.hidden {
 }
 
 #pulseaudio {
-  background-color: #f9e2af;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 #network {
@@ -118,7 +119,8 @@ window#waybar.hidden {
 
 #clock {
   font-family: JetBrainsMono Nerd Font;
-  background-color: #cba6f7;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
 }
 
 #custom-power {

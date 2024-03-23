@@ -101,6 +101,7 @@
     playerctl
     wl-clipboard
     usbutils
+    kraft
   ];
 
   security.polkit.enable = true;
