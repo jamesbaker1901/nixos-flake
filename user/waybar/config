@@ -6,20 +6,14 @@
     "modules-left": [
         "hyprland/workspaces"
     ],
+    "modules-center": [
+      "clock"
+    ],
     "modules-right": [
         "tray",
         "pulseaudio",
         "battery",
-        "clock"
     ],
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-right": "fullscreen",
-        "icon-theme": "WhiteSur",
-        "icon-size": 25,
-        "tooltip-format": "{title}"
-    },
     "hyprland/workspaces": {
         "on-click": "activate",
         "format": "{icon}",
@@ -34,16 +28,16 @@
             "7": "7",
             "8": "8",
             "9": "9",
-            "active": "󱓻",
+            "active": "",
             "urgent": "󱓻"
         },
     },
     "tray": {
-        "spacing": 10
+        "spacing": 6
     },
     "clock": {
         "tooltip-format": "<tt>{calendar}</tt>",
-        "format-alt": "{:%a, %d %b %Y}",
+        "format-alt": "{:%H:%M %a, %b %d}",
         "format": "{:%H:%M}"
     },
     "pulseaudio": {
