@@ -3,6 +3,7 @@
   border-radius: 0;
   min-height: 0;
   font-family: BlexMono Nerd Font Mono;
+  font-weight: Bold;
   font-size: 13px;
 }
 
@@ -121,6 +122,7 @@ window#waybar.hidden {
 
 #clock {
   font-family: BlexMono Nerd Font Mono;
+  font-weight: Bold;
   background-color: #181825;
   color: #cdd6f4;
 }

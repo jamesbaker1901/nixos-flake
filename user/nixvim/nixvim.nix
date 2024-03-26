@@ -52,6 +52,9 @@
     ];
 
     extraConfigLua = ''
+      require("zen-mode").setup {
+        plugins = {tmux = { enabled = true },},
+      }
       require("autoclose").setup()
       require('Comment').setup {
         toggler = {
