@@ -12,6 +12,8 @@
       update = "sudo nixos-rebuild switch --flake /etc/nixos#default";
     };
 
+    envExtra = "PATH=$PATH:$HOME/.cargo/bin";
+
     history = {
       path = "${config.xdg.dataHome}/zsh/zsh_history";
       size = 10000;

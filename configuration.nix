@@ -73,6 +73,7 @@
   environment.systemPackages = with pkgs; [
     git
     gcc
+    python3
     tmux
     zsh
     neovim
