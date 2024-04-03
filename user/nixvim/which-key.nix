@@ -57,6 +57,7 @@
                 c = {"<cmd>Telescope git_commits<cr>",  "commits"},
                 C = {"<cmd>Telescope git_bcommits<cr>",  "buffer commits"},
                 f = {"<cmd>Telescope find_files<cr>",  "files"},
+                t = {"<cmd>Telescope live_grep<cr>",  "text"},
                 g = {"<cmd>Telescope git_files<cr>",  "git files"},
                 m = {"<cmd>Telescope marks<cr>",  "marks"} ,
                 p = {"<cmd>Telescope helptags<cr>",  "help tags"} ,

@@ -40,6 +40,7 @@
       { plugin = autoclose-nvim; }
       { plugin = zen-mode-nvim; }
       { plugin = twilight-nvim; }
+      { plugin = vim-sneak; }
       (pkgs.vimUtils.buildVimPlugin {
         name = "quick-scope";
         src = pkgs.fetchFromGitHub {
@@ -64,6 +65,8 @@
           block = ',/b',
         },
       }
+
+      vim.cmd "let g:sneak#label = 1"
 
     '';
   };
