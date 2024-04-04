@@ -13,6 +13,7 @@
     ./user/starship.nix
     ./user/direnv.nix
     ./user/zsh.nix
+    ./user/git.nix
   ];
 
   home.packages = with pkgs; [

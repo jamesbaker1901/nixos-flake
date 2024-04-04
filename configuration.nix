@@ -96,6 +96,8 @@
     wl-clipboard
     usbutils
     kraft
+    gnupg
+    pinentry-curses
   ];
 
   security.polkit.enable = true;
@@ -104,7 +106,12 @@
     enable = true;
     xwayland.enable = true;
   };
-
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryFlavor = "curses";
+    enableSSHSupport = true;
+  };
+  services.pcscd.enable = true;
   xdg.portal = { enable = true; };
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
