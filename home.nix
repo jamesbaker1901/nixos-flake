@@ -39,6 +39,7 @@
     macchina
     pfetch
     grimblast
+    kraft
   ];
 
   xdg.configFile.hypr.source = ./user/hypr;
