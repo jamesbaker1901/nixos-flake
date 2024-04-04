@@ -1,5 +1,6 @@
 { config, pkgs, ... }:
 {
+  xdg.configFile."alacritty/catppuccin".source = ./alacritty/catppuccin;
   programs.alacritty = {
     enable = true;
     settings = {

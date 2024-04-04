@@ -12,6 +12,8 @@
     ./user/direnv.nix
     ./user/zsh.nix
     ./user/git.nix
+    ./user/hypr.nix
+    ./user/rofi.nix
   ];
 
   home.packages = with pkgs; [
@@ -42,17 +44,7 @@
     kraft
   ];
 
-  xdg.configFile.hypr.source = ./user/hypr;
-  xdg.configFile.waybar.source = ./user/waybar;
   home.file.".tmux.conf".source = ./user/tmux/tmux.conf;
-  home.file.".wallpaper".source = ./user/hypr/wallpaper.png;
-
-  xdg.configFile."rofi/config.rasi".source = ./user/rofi/config.rasi;
-  home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source =
-    ./user/rofi/themes/catppuccin-mocha.rasi;
-  
-  xdg.configFile."alacritty/catppuccin".source = ./user/alacritty/catppuccin;
 
   home.sessionVariables = { EDITOR = "nvim"; };
-
 }
