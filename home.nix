@@ -50,6 +50,8 @@
   xdg.configFile."rofi/config.rasi".source = ./user/rofi/config.rasi;
   home.file.".local/share/rofi/themes/catppuccin-mocha.rasi".source =
     ./user/rofi/themes/catppuccin-mocha.rasi;
+  
+  xdg.configFile."alacritty/catppuccin".source = ./user/alacritty/catppuccin;
 
   home.sessionVariables = { EDITOR = "nvim"; };
 
