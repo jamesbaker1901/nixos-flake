@@ -2,6 +2,8 @@
   imports =
     [ ./hardware-configuration.nix inputs.home-manager.nixosModules.default ];
 
+  system.stateVersion = "23.11";
+
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
@@ -112,5 +114,4 @@
   xdg.portal = { enable = true; };
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
-  system.stateVersion = "23.11";
 }
