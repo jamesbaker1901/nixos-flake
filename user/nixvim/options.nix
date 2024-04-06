@@ -54,6 +54,7 @@
       vim.cmd "set cmdheight=1"
       vim.cmd "set timeoutlen=150"
       vim.cmd "set ttimeoutlen=10"
+      vim.cmd "set cmdheight=0"
     '';
   };
 }

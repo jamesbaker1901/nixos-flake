@@ -34,7 +34,7 @@
       exclude.filetypes = [ "startify" ];
     };
     plugins.nvim-lightbulb.enable = true;
-    plugins.floaterm.enable = true;
+    plugins.floaterm.enable = false;
     extraPlugins = with pkgs.vimPlugins; [
       { plugin = nvim-web-devicons; }
       { plugin = autoclose-nvim; }
@@ -51,6 +51,10 @@
         };
       })
     ];
+
+    plugins.toggleterm = {
+      enable = true;
+    };
 
     extraConfigLua = ''
       require("zen-mode").setup {

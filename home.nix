@@ -17,31 +17,31 @@
   ];
 
   home.packages = with pkgs; [
-    xclip
-    neofetch
-    (nerdfonts.override { fonts = [ "DroidSansMono" "IBMPlexMono" ]; })
     slack
     discord
     spotify
+    zoom-us
     ripgrep
     fzf
-    kubectl
     mpv
     youtube-dl
+    deluge-gtk
     font-awesome
-    lxappearance
-    zoom-us
-    rustup
+    (nerdfonts.override { fonts = [ "DroidSansMono" "IBMPlexMono" ]; })
     ranger
     rofi-wayland
-    calibre
-    deluge-gtk
     catppuccin-gtk
     gmtp
-    macchina
+    xclip
+    neofetch
     pfetch
     grimblast
-    kraft
+    kraft 
+    rustup
+    kubectl
+    stern
+    jq
+    yq
   ];
 
   home.file.".tmux.conf".source = ./user/tmux/tmux.conf;

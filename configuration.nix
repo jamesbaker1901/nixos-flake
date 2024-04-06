@@ -93,7 +93,6 @@
     playerctl
     wl-clipboard
     usbutils
-    kraft
     gnupg
     pinentry-curses
   ];
