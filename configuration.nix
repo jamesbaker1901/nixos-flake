@@ -97,6 +97,8 @@
     usbutils
     gnupg
     pinentry-curses
+    parted
+    gparted
   ];
 
   security.polkit.enable = true;
