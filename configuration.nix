@@ -99,6 +99,7 @@
     pinentry-curses
     parted
     gparted
+    rpi-imager
   ];
 
   security.polkit.enable = true;
