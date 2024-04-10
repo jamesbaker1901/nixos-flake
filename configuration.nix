@@ -100,6 +100,7 @@
     parted
     gparted
     rpi-imager
+    iotop
   ];
 
   security.polkit.enable = true;
