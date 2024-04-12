@@ -24,6 +24,7 @@
     ripgrep
     fzf
     mpv
+    vlc
     youtube-dl
     deluge-gtk
     font-awesome

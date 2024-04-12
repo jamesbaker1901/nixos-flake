@@ -101,6 +101,8 @@
     gparted
     rpi-imager
     iotop
+    cifs-utils
+    samba
   ];
 
   security.polkit.enable = true;
