@@ -103,6 +103,7 @@
     iotop
     cifs-utils
     samba
+    kodi-wayland
   ];
 
   security.polkit.enable = true;
