@@ -107,6 +107,7 @@
     openvpn
     openresolv
     coreutils
+    iperf
   ];
 
   security.polkit.enable = true;
