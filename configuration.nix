@@ -104,6 +104,9 @@
     cifs-utils
     samba
     kodi-wayland
+    openvpn
+    openresolv
+    coreutils
   ];
 
   security.polkit.enable = true;
