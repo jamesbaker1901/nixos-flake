@@ -106,8 +106,10 @@
     kodi-wayland
     openvpn
     openresolv
+    tailscale
     coreutils
     iperf
+    dig
   ];
 
   security.polkit.enable = true;
@@ -125,4 +127,6 @@
   xdg.portal = { enable = true; };
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
+
+  services.tailscale.enable = true;
 }
