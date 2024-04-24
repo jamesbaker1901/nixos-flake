@@ -110,6 +110,7 @@
     coreutils
     iperf
     dig
+    libreoffice
   ];
 
   security.polkit.enable = true;
