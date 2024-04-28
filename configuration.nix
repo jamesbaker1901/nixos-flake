@@ -36,6 +36,16 @@
     xkbVariant = "";
   };
 
+  # xfce
+  # services.xserver = {
+    # desktopManager = {
+      # xterm.enable = false;
+      # xfce.enable = true;
+    # };
+    # displayManager.defaultSession = "xfce";
+  # };
+
+
   #services.printing.enable = true;
 
   sound.enable = true;
@@ -111,6 +121,7 @@
     iperf
     dig
     libreoffice
+    xwaylandvideobridge
   ];
 
   security.polkit.enable = true;
@@ -119,6 +130,7 @@
     enable = true;
     xwayland.enable = true;
   };
+
   programs.gnupg.agent = {
     enable = true;
     pinentryFlavor = "curses";
