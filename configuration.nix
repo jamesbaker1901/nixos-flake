@@ -91,6 +91,7 @@
     alacritty
     bat
     rsync
+    openssh
     eza
     bat
     htop
@@ -138,6 +139,8 @@
   };
   services.pcscd.enable = true;
   xdg.portal = { enable = true; };
+
+  services.openssh.enable = true;
 
   environment.sessionVariables = { NIXOS_OZONE_WL = "1"; };
 
